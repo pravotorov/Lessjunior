@@ -1,0 +1,62 @@
+.sign-up-header {
+  font-size: 28px;
+  font-weight: lighter;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 3px;
+}
+
+.lawyer_check {
+  border: 1px solid;
+  border-color: lightgrey;
+  border-radius: 2px;
+  min-height: 100px;
+  max-height: 100px;
+  overflow-y: scroll;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align:justify;
+  padding: 10px;
+}
+
+.therms_and_conditions {
+  border: 1px solid;
+  border-color: lightgrey;
+  border-radius: 2px;
+  min-height: 150px;
+  max-height: 150px;
+  overflow-y: scroll;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align:justify;
+  padding: 10px;
+}
+
+.radio-label { 
+  font-size: 18px;
+}
+
+.radio-content { 
+  margin: 10px;
+}
+
+.check-box-and-card {
+  /* margin-left: 9px; */
+  padding: 5px;
+  border-radius: 7px;
+  border: 1px solid #ADD8E6;
+}
+
+.payment-label {
+  align-items: flex-start;
+  display: flex;
+}
+
+.sign-up-button {
+  width: 100%;
+}
+
+.cyan {
+  background: #00dba8 !important; 
+  color: white !important;
+}
