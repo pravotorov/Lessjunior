@@ -2,13 +2,13 @@ import React, { useState, useEffect, useContext } from 'react'
 // import { doLogin, resetLoginErrors } from '../actions/actionCreators'
 // import { connect } from 'react-redux'
 import { Row, Col } from 'react-flexbox-grid'
-import {Button, Card, Form, Icon, Image, Input, Message, Divider, Header} from 'semantic-ui-react'
+import {Button, Card, Form, Icon, Image, Input, Message, Divider, Header, Step} from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import Logo from '../images/logo.png'
 // import { history } from '../store'
 import { useHistory } from 'react-router-dom'
 
-const Login = (props) => {
+const Registration = (props) => {
   const [credits, setCredits] = useState({
     email: '',
     password: ''
@@ -33,7 +33,7 @@ const Login = (props) => {
 
   // //if logged in redirect to main page
   // if (props.auth.isLogged)
-  //   history.push('/home')
+  //   history.push('/')
 
   
   return (
@@ -41,7 +41,7 @@ const Login = (props) => {
         <Row>
           <Col xs={12}>
             <Row center="xs">
-              <Col className="login " xs={12} sm={6} md={4}>
+              <Col className="login " xs={12} sm={8} md={8}>
                 <Card fluid={true} raised={true} centered={true}>
                   <Card.Content>
                     <div>
@@ -49,6 +49,7 @@ const Login = (props) => {
                       <Header as='h2'>
                         <Header.Content>Exceed-team</Header.Content>
                       </Header>
+
                       <Form  className="loginForm" onSubmit={logIn}>
                         <Form.Field>
                           <Input icon='user' iconPosition='left' value={credits.email} onChange={handleEmailChange} name="email" placeholder={'email'}/>
@@ -56,15 +57,32 @@ const Login = (props) => {
                         <Form.Field>
                           <Input icon='lock' iconPosition='left' value={credits.password} onChange={handlePasswordChange} type="password" placeholder={'password'} />
                         </Form.Field>
-                        <Button type="submit" className='lisia-blue' fluid>Login</Button>
                         <Divider />
-                        <div className="footer">
-                          <Link to="/registration">Sign Up
-                          </Link>
-                        </div>
+                        <Button type="submit" className='lisia-blue' fluid>Create</Button>
                       </Form>
                     </div>
                   </Card.Content>
+                  <Step.Group ordered>
+                    <Step completed>
+                      <Step.Content>
+                        <Step.Title>Shipping</Step.Title>
+                        <Step.Description>Choose your shipping options</Step.Description>
+                      </Step.Content>
+                    </Step>
+
+                    <Step active>
+                      <Step.Content>
+                        <Step.Title>Billing</Step.Title>
+                        <Step.Description>Enter billing information</Step.Description>
+                      </Step.Content>
+                    </Step>
+
+                    <Step active>
+                      <Step.Content>
+                        <Step.Title>Confirm Order</Step.Title>
+                      </Step.Content>
+                    </Step>
+                  </Step.Group>
                 </Card>
               </Col>
             </Row>
@@ -79,5 +97,5 @@ const Login = (props) => {
 //   auth: state.auth,
 // })
 
-export default Login
+export default Registration
 // export default connect(mapStateToProps)(Login)

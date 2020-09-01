@@ -27,8 +27,8 @@ export default class MenuExampleStackable extends Component {
                                             name='testimonials'
                                             onClick={this.handleItemClick}
                                         >
-                                            <Link to="/signIn">
-                                                SignIn
+                                            <Link to="/profile">
+                                                Profile
                                             </Link>
                                         </Menu.Item>
 
@@ -36,8 +36,8 @@ export default class MenuExampleStackable extends Component {
                                             name='sign-in'
                                             onClick={this.handleItemClick}
                                         >
-                                            <Link to="/signUp">
-                                                SignUp
+                                            <Link to="/login">
+                                                LogOut
                                             </Link>
                                         </Menu.Item>
 

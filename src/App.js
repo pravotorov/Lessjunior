@@ -5,16 +5,17 @@ import { BrowserRouter, Switch,Router, Route, } from 'react-router-dom';
 
 // =========== Components =========== //
 import Login from './components/Login'
+import Registration from './components/Registration'
 import Home from './components/Home/Home'
-// import 'semantic-ui-css/semantic.min.css'
 
-function App(props ) {
+const App = (props) => {
   return (
       <BrowserRouter>
         <Switch>
           {/*<Route path="/registration" component={Registration} />*/}
             <Route path="/home" component={Home} />
             <Route path="/login" component={Login} />
+            <Route path="/registration" component={Registration} />
           {/*<Main>*/}
           {/*  <Switch>*/}
           {/*    <Route exact path="/" component={Search} />*/}

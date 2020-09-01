@@ -12,7 +12,7 @@ const Home = () => {
     const profileList = profile.length ? (
         profile.map(prof => {
             return (
-                <Col xs={4}>
+                <Col xs={4} className="cardElem">
                     <Card >
                         <Image src={ImgProfile} wrapped ui={false} />
                         <Card.Content>
