@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
-import { Menu, Icon } from 'semantic-ui-react'
+import { Menu, Header, Image } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 import 'semantic-ui-css/semantic.min.css'
 import { Row, Col } from 'react-flexbox-grid'
+import Logo from '../images/logo.png'
+
 
 export default class MenuExampleStackable extends Component {
 
@@ -13,34 +16,33 @@ export default class MenuExampleStackable extends Component {
                 <Col xs={12}>
                     <Row center="xs">
                         <Col xs={8} className="header" >
-                            <Menu stackable>
-                                <Menu.Item>
-                                    <Icon name='home' size='big' />
-                                </Menu.Item>
+                                <Menu >
+                                        <Menu.Item>
+                                            <Header as='h2'>
+                                                <Image size='small' src={ Logo } className='m-b-50'  />
+                                                <Header.Content>Exceed-team</Header.Content>
+                                            </Header>
+                                        </Menu.Item>
+                                        <Menu.Item
+                                            name='testimonials'
+                                            onClick={this.handleItemClick}
+                                        >
+                                            <Link to="/signIn">
+                                                SignIn
+                                            </Link>
+                                        </Menu.Item>
 
-                                 <Menu.Item
-                                     name='features'
-                                     onClick={this.handleItemClick}
-                                 >
-                                     Features
-                                 </Menu.Item>
-
-                                 <Menu.Item
-                                     name='testimonials'
-                                     onClick={this.handleItemClick}
-                                 >
-                                     Login
-                                 </Menu.Item>
-
-                                 <Menu.Item
-                                     name='sign-in'
-                                     onClick={this.handleItemClick}
-                                 >
-                                     Sign-in
-                                 </Menu.Item>
+                                        <Menu.Item
+                                            name='sign-in'
+                                            onClick={this.handleItemClick}
+                                        >
+                                            <Link to="/signUp">
+                                                SignUp
+                                            </Link>
+                                        </Menu.Item>
 
 
-                            </Menu>
+                                </Menu>
                         </Col>
                     </Row>
                 </Col>

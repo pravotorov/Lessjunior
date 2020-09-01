@@ -12,35 +12,25 @@ export default class MenuExampleStackable extends Component {
             <Row>
                 <Col xs={12}>
                     <Row center="xs">
-                        <Col xs={8}  >
-                            <Menu stackable>
-                                <Menu.Item>
-                                    <Icon name='home' size='big' />
-                                </Menu.Item>
-
-                                <Menu.Item
-                                    name='features'
-                                    onClick={this.handleItemClick}
-                                >
-                                    Features
-                                </Menu.Item>
-
-                                <Menu.Item
-                                    name='testimonials'
-                                    onClick={this.handleItemClick}
-                                >
-                                    Login
-                                </Menu.Item>
-
-                                <Menu.Item
-                                    name='sign-in'
-                                    onClick={this.handleItemClick}
-                                >
-                                    Sign-in
-                                </Menu.Item>
-
-
-                            </Menu>
+                        <Col xs={8}>
+                            <Row end="xs">
+                                <Col xs={2}>
+                                    <Menu stackable className="headerMenu">
+                                        <Menu.Item
+                                        name='testimonials'
+                                        onClick={this.handleItemClick}
+                                        >
+                                        Login
+                                        </Menu.Item>
+                                        <Menu.Item
+                                            name='sign-in'
+                                            onClick={this.handleItemClick}
+                                        >
+                                            Sign-in
+                                        </Menu.Item>
+                                    </Menu>
+                                </Col>
+                            </Row>
                         </Col>
                     </Row>
                 </Col>

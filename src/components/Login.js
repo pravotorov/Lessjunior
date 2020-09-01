@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react'
-import PropTypes from 'prop-types'
 // import { doLogin, resetLoginErrors } from '../actions/actionCreators'
 // import { connect } from 'react-redux'
 import { Row, Col } from 'react-flexbox-grid'
 import { Button, Card, Form, Icon, Image, Input, Message, Divider } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-// import Logo from '../images/logo-admin.png'
+import Logo from '../images/logo.png'
 // import { history } from '../store'
 import { useHistory } from 'react-router-dom'
 
@@ -39,17 +38,16 @@ const Login = (props) => {
   
   return (
     <div className="app-container" >
-      <div className="login animated fadeIn">
         <Row>
           <Col xs={12}>
             <Row center="xs">
-              <Col xs={11} sm={6} md={4}>
+              <Col className="login " xs={12} sm={6} md={4}>
                 <Card fluid={true} raised={true} centered={true}>
                   <Card.Content>
                     <div className='loginLanguageSelector' >
                     </div>
                     <div className="loginForm">                    
-                      {/*<Image size='small' src={ Logo } className='m-b-50'/>*/}
+                      <Image size='small' src={ Logo } className='m-b-50'/>
                       <Form onSubmit={logIn}>
                         <Form.Field>
                           <Input icon='user' iconPosition='left' value={credits.email} onChange={handleEmailChange} name="email" placeholder={'email'}/>
@@ -71,7 +69,6 @@ const Login = (props) => {
             </Row>
           </Col>
         </Row>
-      </div>
     </div>
   )
 
