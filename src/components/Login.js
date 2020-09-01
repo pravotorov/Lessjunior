@@ -57,7 +57,7 @@ const Login = (props) => {
                           <Input icon='lock' iconPosition='left' value={credits.password} onChange={handlePasswordChange} type="password" placeholder={'password'} />
                         </Form.Field>
                         <Button type="submit" className='lisia-blue' fluid>Login</Button>
-                        <Divider />
+                        <Divider horizontal>Or</Divider>
                         <div className="footer">
                           <Link to="/registration">Sign Up
                           </Link>

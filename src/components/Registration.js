@@ -49,18 +49,35 @@ const Registration = (props) => {
                       <Header as='h2'>
                         <Header.Content>Exceed-team</Header.Content>
                       </Header>
-
-                      <Form  className="loginForm" onSubmit={logIn}>
-                        <Form.Field>
-                          <Input icon='user' iconPosition='left' value={credits.email} onChange={handleEmailChange} name="email" placeholder={'email'}/>
-                        </Form.Field>
-                        <Form.Field>
-                          <Input icon='lock' iconPosition='left' value={credits.password} onChange={handlePasswordChange} type="password" placeholder={'password'} />
-                        </Form.Field>
-                        <Divider />
-                        <Button type="submit" className='lisia-blue' fluid>Create</Button>
-                      </Form>
                     </div>
+                    <Form size="large" key="large">
+                      <Form.Group widths='equal'>
+                        <Form.Field
+                            label='First name'
+                            control='input'
+                            placeholder='First name'
+                        />
+                        <Form.Field
+                            label='Last name'
+                            control='input'
+                            placeholder='Last name'
+                        />
+                      </Form.Group>
+                      <Form.Group widths='equal'>
+                        <Form.Field
+                            label='Email'
+                            control='input'
+                            placeholder='Email'
+                        />
+                        <Form.Field
+                            label='Password'
+                            control='input'
+                            placeholder='Password'
+                        />
+                      </Form.Group>
+                      <Divider />
+                      <Button type="submit" className='lisia-blue' fluid>Create</Button>
+                    </Form>
                   </Card.Content>
                   <Step.Group ordered>
                     <Step completed>

@@ -28,6 +28,15 @@ export default class MenuExampleStackable extends Component {
                                             onClick={this.handleItemClick}
                                         >
                                             <Link to="/profile">
+                                                Tasks
+                                            </Link>
+                                        </Menu.Item>
+
+                                        <Menu.Item
+                                            name='testimonials'
+                                            onClick={this.handleItemClick}
+                                        >
+                                            <Link to="/profile">
                                                 Profile
                                             </Link>
                                         </Menu.Item>

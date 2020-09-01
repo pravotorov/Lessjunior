@@ -15,6 +15,9 @@ body {
 .cardElem {
   margin-top: 20px;
 }
+.profilePage {
+  margin-top: 50px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
