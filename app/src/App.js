@@ -9,6 +9,7 @@ import Login from './components/Login'
 import Registration from './components/Registration'
 import Home from './components/Home/Home'
 import Profile from './components/Profile/Profile'
+import Task from "./components/TaskList/Task";
 
 const client = new ApolloClient({
     uri: 'http://localhost:3005/graphql',
@@ -19,11 +20,11 @@ const App = (props) => {
       <ApolloProvider client={client}>
           <BrowserRouter>
             <Switch>
-              {/*<Route path="/registration" component={Registration} />*/}
                 <Route exact path="/" component={Home} />
                 <Route path="/login" component={Login} />
                 <Route path="/registration" component={Registration} />
                 <Route path="/profile" component={Profile} />
+                <Route path="/tasklist" component={Task} />
               {/*<Main>*/}
               {/*  <Switch>*/}
               {/*    <Route exact path="/" component={Search} />*/}

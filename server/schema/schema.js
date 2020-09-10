@@ -4,6 +4,7 @@ const { GraphQLObjectType, GraphQLString, GraphQLSchema, GraphQLID, GraphQLInt, 
 
 const Tasks = require('../models/task');
 const Users = require('../models/user');
+const Admins = require('../models/admin');
 
 
 const adminType = new GraphQLObjectType({
@@ -50,6 +51,24 @@ const TaskType = new GraphQLObjectType({
 const Mutation = new GraphQLObjectType({
 	name: 'Mutation',
 	fields: {
+		addAdmin: {
+			type: adminType,
+			args: {
+				name: { type: new GraphQLNonNull(GraphQLString) },
+				surname: { type: new GraphQLNonNull(GraphQLString) },
+				login: { type: new GraphQLNonNull(GraphQLString) },
+				phone: { type: new GraphQLNonNull(GraphQLString) },
+			},
+			resolve(parent, { name, surname, login,  phone}) {
+				const admin = new Admins({
+					name,
+					surname,
+					login,
+					phone
+				});
+				return admin.save();
+			},
+		},
 		addUser: {
 			type: UserType,
 			args: {

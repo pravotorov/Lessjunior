@@ -13,3 +13,29 @@ export const usersQuery = gql`
         }
     }
 `;
+
+export const usersQueryId = gql`
+    query ($id: ID) {
+        users(id: $id){
+            id
+            name
+            surname
+            login
+            age
+            phone
+            endDate
+        }
+    }
+`;
+
+export const taskQuery = gql`
+    query {
+        tasks{
+            id
+            title
+            text
+            photo
+            date
+        }
+    }
+`;

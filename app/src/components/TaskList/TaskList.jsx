@@ -2,20 +2,17 @@ import React from "react";
 import {withRouter} from "react-router-dom";
 import { Row, Col } from 'react-flexbox-grid'
 
-import UsersItem from "./usersItem";
-import withHocs from './UsersListHoc';
+import TaskItem from "./TaskItem";
+import withHocs from './TaskListHoc';
 
 const UsersList = (props) => {
     const { data = {} } = props;
-    const { users = [] } = data;
-    console.log(props)
+    const { tasks = [] } = data;
 
     return(
         <>
             <Col xs={12}>
-                <Row center="xs">
-                    <UsersItem users={ users }/>
-                </Row>
+                <TaskItem tasks={ tasks }/>
             </Col>
         </>
     )
